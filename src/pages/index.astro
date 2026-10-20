@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Intro from '../components/articles/Intro.astro';
+import Work from '../components/articles/Work.astro';
+import About from '../components/articles/About.astro';
+import Writing from '../components/articles/Writing.astro';
+import Contact from '../components/articles/Contact.astro';
+import Elements from '../components/articles/Elements.astro';
+---
+
+<Base>
+	<Header />
+
+	<div id="main">
+		<Intro />
+		<Work />
+		<About />
+		<Writing />
+		<Contact />
+		<Elements />
+	</div>
+
+	<footer id="footer">
+		<p class="copyright">&copy; Chris Ahrens {new Date().getFullYear()}</p>
+	</footer>
+</Base>

@@ -1,0 +1,29 @@
+{
+	"name": "chris-ahrens-com",
+	"type": "module",
+	"version": "0.0.1",
+	"private": true,
+	"engines": {
+		"node": ">=22.22.0"
+	},
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro build && wrangler dev",
+		"deploy": "astro build && wrangler deploy",
+		"check": "astro check",
+		"cf-typegen": "wrangler types --include-runtime=false",
+		"db:migrate:local": "wrangler d1 migrations apply DB --local",
+		"db:migrate:remote": "wrangler d1 migrations apply DB --remote"
+	},
+	"dependencies": {
+		"@astrojs/cloudflare": "^14.4.1",
+		"astro": "^7.4.1"
+	},
+	"devDependencies": {
+		"@astrojs/check": "^0.9.11",
+		"@cloudflare/workers-types": "^5.20261019.1",
+		"typescript": "^6.0.3",
+		"wrangler": "^4.151.2"
+	}
+}
